@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soluciones de Viajes Empresariales</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="navbar">
+            <div class="logo">
+                <img src="https://i.pinimg.com/564x/31/6f/b8/316fb8b7a426b8d825a45bf8ae8b5776.jpg" alt="Logotipo de Constant">
+                <span>Constant</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#productos">Producto</a></li>
+                    <li><a href="#soluciones">Soluciones</a></li>
+                    <li><a href="#recursos">Recursos</a></li>
+                    <li><a href="#precios">Precios</a></li>
+                </ul>
+            </nav>
+            <div class="nav-buttons">
+                <a href="#" id="sign-in-button">Contactarme</a>
+            </div>
+        </header>
+    
+        <main class="main-content">
+            <div class="left-content">
+                <div class="text-content">
+                    <h1>Esta es mi prueba práctica</h1>
+                    <p>Soy un estudiante de desarrollo de software con ganas de realizar mis horas laborales.</p>
+                </div>
+                
+                <!-- Recuadro amarillo -->
+                <div class="yellow-box">
+                    <button class="cta-button" id="instagram-button">Este es mi Instagram</button>
+                    <p>¡Sígueme para más actualizaciones!</p>
+
+                    <button class="cta-button secondary" id="github-button">Este es mi GitHub</button>
+                    <p>Consulta mis proyectos.</p>
+                </div>
+            </div>
+            
+            <div class="right-content">
+                <div class="main-image">
+                    <img src="image.png" alt="Imagen Principal">
+                </div>
+                <div class="secondary-images">
+                    <img src="https://i.pinimg.com/564x/a5/aa/9f/a5aa9fb2b5b0b0aafccaf1f2f3e421c7.jpg" alt="Imagen de Gráfico">
+                    <img src="https://i.pinimg.com/564x/13/94/00/1394000b150546c440353517105654c2.jpg" alt="Imagen de Persona">
+                </div>
+            </div>
+        </main>
+    
+        <div id="productos" class="section-content">
+            <h2>Producto</h2>
+            <p>Detalles sobre el producto.</p>
+        </div>
+
+        <div id="soluciones" class="section-content">
+            <h2>Soluciones</h2>
+            <p>Detalles sobre las soluciones que ofrecemos.</p>
+        </div>
+        
+        <div id="recursos" class="section-content">
+            <h2>Recursos</h2>
+            <p>Recursos y guías para mejorar tu experiencia.</p>
+        </div>
+        
+        <div id="precios" class="section-content">
+            <h2>Precios</h2>
+            <p>Planes y precios disponibles para tu negocio.</p>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('sign-in-button').addEventListener('click', function() {
+            window.location.href = 'https://www.instagram.com/e.campos._.03?igsh=MXgzdDV4eTZ2azdzNw==';
+        });
+
+        document.getElementById('instagram-button').addEventListener('click', function() {
+            window.location.href = 'https://www.instagram.com/e.campos._.03?igsh=MXgzdDV4eTZ2azdzNw==';
+        });
+
+        document.getElementById('github-button').addEventListener('click', function() {
+            window.location.href = 'https://github.com/eduardoCampos03';
+        });
+
+        // Funcionalidad para los botones de lista
+        document.querySelectorAll('nav ul li a').forEach(function(anchor) {
+            anchor.addEventListener('click', function(event) {
+                event.preventDefault(); // Prevenir el comportamiento predeterminado del ancla
+                const targetId = anchor.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+                targetElement.scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+    </script>
+</body>
+</html>
